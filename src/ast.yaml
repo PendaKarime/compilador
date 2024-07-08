@@ -1,0 +1,24 @@
+TranslationUnit
+    └── FunctionDefinition
+        ├── TypeSpecifier: int
+        ├── Declarator: main
+                └── CompoundStatement
+                            ├── Declaration
+                            │   ├── TypeSpecifier: int
+                            │   └── InitDeclarator: num1 = 
+                            ├── Declaration
+                            │   ├── TypeSpecifier: int
+                            │   └── InitDeclarator: num2 = 
+                            ├── Declaration
+                            │   ├── TypeSpecifier: int
+                            │   └── InitDeclarator: sum = 
+                            ├── Declaration
+                            │   ├── TypeSpecifier: int
+                            │   └── InitDeclarator: i
+                            └── IfStatement
+                                ├── Condition: 
+                                        └── CompoundStatement
+                                                    ├── ExpressionStatement
+                                └── ElseStatement
+                                        └── CompoundStatement
+                                                    ├── ExpressionStatement

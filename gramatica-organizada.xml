@@ -1,0 +1,57 @@
+<programa>      ::=     <decl_list>
+
+<decl_list>     ::=     <decl> <decl_list> | ε
+
+<decl>          ::=     <var_decl> | <fun_decl>
+
+<var_decl>      ::=     <type_spec> ID <var_decl_end>
+
+<var_decl_end>  ::=     ";" | "[" INT_LIT "]" ";" | "=" <exp> ";"
+
+<fun_decl>      ::=     <type_spec> ID "(" <params> ")" <fun_decl_end>
+
+<fun_decl_end>  ::=     ";" | <com_stmt>
+
+<type_spec>     ::=     "void" | "float" | "char" | "int" | "double"
+
+<params>        ::=     "void" | <param> | ε
+
+<param>         ::=     <type_spec> ID <param_end>
+
+<param_end>     ::=     "[" "]" <param_end> | "," <type_spec> ID <param_end> | ε
+
+<com_stmt>      ::=     "{" <content> "}"
+
+<content>       ::=     <local_decls> <stmt_list>
+
+<local_decls>   ::=     <type_spec> ID <local_decl_end> | ε
+
+<local_decl_end>::=     ";" | "[" "]" ";" | "=" <exp> ";" | "," ID <local_decl_end>
+
+<stmt_list>     ::=     <stmt> <stmt_list> | ε
+
+<stmt>          ::=     <exp_stmt> | <com_stmt> | <if_stmt> | <while_stmt> | <return_stmt> | <break_stmt> | <for_stmt> | <printf_stmt> | <scanf_stmt> | <do_stmt>
+
+<exp_stmt>      ::=     ";" | <exp> ";"
+
+<if_stmt>       ::=     "if" "(" <exp> ")" <stmt> ("else" <stmt>)?
+
+<while_stmt>    ::=     "while" "(" <exp> ")" <stmt>
+
+<for_stmt>      ::=     "for" "(" <for_init> ";" <exp> ";" <exp> ")" <stmt>
+
+<for_init>      ::=     <type_spec> ID "=" <exp> | <exp>
+
+<return_stmt>   ::=     "return" <exp>? ";"
+
+<break_stmt>    ::=     "break" ";"
+
+<exp>           ::=     ID <exp_end> | <unary_op> <exp> | <literal>
+
+<exp_end>       ::=     "[" <exp> "]" | <bin_op> <exp> | ε
+
+<unary_op>      ::=     "+" | "-" | "!"
+
+<bin_op>        ::=     "+" | "-" | "*" | "/" | "%" | "==" | "<=" | ">=" | "<" | ">" | "&&" | "||" | "=" | "+=" | "-="
+
+<literal>       ::=     FLOAT_LIT | CHAR_LIT | INT_LIT

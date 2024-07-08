@@ -1,0 +1,26 @@
+{
+  "name": "compilador",
+  "version": "1.0.0",
+  "description": "# Resquisitos para Rodar O projecto   **Ter o Node instalando    ** Link: https://nodejs.org/en/download",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andersonigfrancisco/Compilador.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andersonigfrancisco/Compilador/issues"
+  },
+  "homepage": "https://github.com/andersonigfrancisco/Compilador#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0",
+    "jest": "^29.7.0"
+  }
+}
